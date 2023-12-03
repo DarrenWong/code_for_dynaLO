@@ -20,11 +20,9 @@ If you use this work for your research, you may want to cite
 F. Huang, W. Wen, J. Zhang, C. Wang and L. -T. Hsu, "Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas," in _IEEE Transactions on Intelligent Vehicles_, doi: 10.1109/TIV.2023.3338141.
 
 ```
-@INPROCEEDINGS{dynaLO2023huang,
+@article{dynaLO2023huang,
   author={Huang, Feng and Wen, Weisong and Zhang, Jiachen and Wang, Chaoqun and Hsu, Li-Ta},
-  booktitle={IEEE Transactions on Intelligent Vehicles}, 
+  journal={IEEE Transactions on Intelligent Vehicles},
   title={Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas}, 
-  year={2023},
-  volume={},
-  number={}
+  year={2023}
 }
