@@ -1,6 +1,6 @@
 # DynaLO
 
-This repo will contain the implementation for our submitted paper: **Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas**. The code is under arrangement, the estimated release date will be before the end of Dec 2023. 
+This repo will contain the implementation for our [paper](https://ieeexplore.ieee.org/document/10337805): **Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas**. The code is under arrangement, the estimated release date will be before the end of Dec 2023. 
 
 <p align="center">
   <img width="712pix" src="img/system_overview.png">
