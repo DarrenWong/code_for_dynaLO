@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- For Velodyne HDL-32    -->
+    <param name="scan_line" value="32" />
+
+    <!--- Sim Time -->
+    <param name="scan_period" value="0.1" />
+
+    <param name="vertical_angle" type="double" value="2.0" />
+
+
+    <param name="map_resolution" type="double" value="0.2" />
+
+    <param name="max_dis" type="double" value="90.0" />
+    <param name="min_dis" type="double" value="2.5" />
+<!-- for loam -->
+    <!-- <param name="use_reweight" type="bool" value="false" />
+    <param name="use_remove_only" type="bool" value="false" /> -->
+<!-- for remove-->
+
+    <!-- <param name="use_reweight" type="bool" value="true" />
+    <param name="use_remove_only" type="bool" value="true" /> -->
+<!-- for reweightr -->
+    <param name="use_reweight" type="bool" value="true" />
+    <param name="use_remove_only" type="bool" value="false" />
+    <!--- -->
+    <node pkg="dynaLO" type="odom_estimation_node" name="odom_estimation_node" output="screen"/>
+    <node pkg="dynaLO" type="laser_mapping_node" name="laser_mapping_node" output="screen"/>
+    <node pkg="dynaLO" type="laser_processing_node" name="laser_processing_node" >
+        <param name="sensor_type" type="int" value="32" />
+    </node>
+    <node pkg="tf" type="static_transform_publisher" name="word2map_tf"  args="0 0 0 0 0 0 /world /map 10" />
+    
+    <arg name="rviz" default="true" />
+    <group if="$(arg rviz)">
+        <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find dynaLO)/rviz/dynaLO_velodyne.rviz" />
+    </group>
+
+    <node pkg="hector_trajectory_server" type="hector_trajectory_server" name="trajectory_server_loam" ns="base_link" >
+        <param name="/target_frame_name" value="world" />
+        <param name="/source_frame_name" value="base_link" />
+        <param name="/trajectory_update_rate" value="10.0" />
+        <param name="/trajectory_publish_rate" value="10.0" />
+    </node>
+
+</launch>

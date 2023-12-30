@@ -13,6 +13,36 @@ Checkout our demo at [Video Link](https://youtu.be/R6M81tOSEi0)
 <img width="65%" src="img/simulated_factors.gif"/>
 </a>
 </p>
+## Prerequisites
+
+We tested on Ubuntu 64-bit 18.04, ROS Melodic. [ROS Installation](http://wiki.ros.org/ROS/Installation). The package is tested on Ubuntu 18.04 with ROS Melodic. 
+
+### 2. **Ceres Solver** 
+[Ceres Solver](https://ceres-solver.googlesource.com/ceres-solver) 
+
+
+## Build
+### Clone repository:
+```
+    cd ~/catkin_ws/src
+    git clone https://github.com/DarrenWong/code_for_dynaLO.git
+    cd ..
+    catkin_make
+    source ~/catkin_ws/devel/setup.bash
+```
+## Download test rosbag
+Download [dynamic vehicle data](https://www.dropbox.com/scl/fi/j1ddn5yx89nsog82qycsc/dynamic_nuscene_0171.bag?rlkey=cn68y9exz9oyw06gbazgr6her&dl=0), this data is modifidy based on nuscene_0171 using our proposed vehicle simulator (will release soon) 
+
+
+### Launch
+```
+    roslaunch dynaLO reweight.launch
+```
+
+
+## Acknowledgements
+This work is based on [F-LOAM](https://github.com/wh200720041/floam) and [LIO-Mapping](https://github.com/hyye/lio-mapping). Thanks for their great work!
+
 
 ## Citation
 If you use this work for your research, you may want to cite
