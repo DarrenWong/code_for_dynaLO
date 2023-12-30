@@ -6,12 +6,10 @@ This repo will contain the implementation for our [paper](https://ieeexplore.iee
   <img width="712pix" src="img/system_overview.png">
 </p>
 
-## Videos:
-Checkout our demo at [Video Link](https://youtu.be/R6M81tOSEi0)
-<p align='center'>
-<a href="https://youtu.be/R6M81tOSEi0">
-<img width="65%" src="img/simulated_factors.gif"/>
-</a>
+## Evaluation
+
+<p align="center">
+  <img width="712pix" src="img/demo.gif">
 </p>
 
 ## Prerequisites
@@ -20,6 +18,7 @@ We tested on Ubuntu 64-bit 18.04, ROS Melodic. [ROS Installation](http://wiki.ro
 
 ### 1. **Ceres Solver** 
 [Ceres Solver](http://ceres-solver.org/installation.html)
+
 
 
 ## Build
