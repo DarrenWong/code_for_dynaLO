@@ -32,7 +32,7 @@ We tested on Ubuntu 64-bit 18.04, ROS Melodic. [ROS Installation](http://wiki.ro
     source ~/catkin_ws/devel/setup.bash
 ```
 ## Download test rosbag
-Download [dynamic vehicle data](https://www.dropbox.com/scl/fi/j1ddn5yx89nsog82qycsc/dynamic_nuscene_0171.bag?rlkey=cn68y9exz9oyw06gbazgr6her&dl=0), this data is modifidy based on nuscene_0171 using our proposed vehicle simulator (will release soon) 
+Download [dynamic vehicle data](https://www.dropbox.com/scl/fi/j1ddn5yx89nsog82qycsc/dynamic_nuscene_0171.bag?rlkey=cn68y9exz9oyw06gbazgr6her&dl=0), this data is modified based on [nuScenes](https://www.nuscenes.org/) Sequence 0171 using our proposed vehicle simulator (will release soon) 
 
 
 ### Launch
