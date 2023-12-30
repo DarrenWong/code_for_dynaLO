@@ -1,6 +1,6 @@
 # DynaLO
 
-This repo will contain the implementation for our [paper](https://ieeexplore.ieee.org/document/10337805): **Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas**. The code is under arrangement, the estimated release date will be before the end of Dec 2023. 
+This repo will contain the implementation for our [paper](https://ieeexplore.ieee.org/document/10337805): **Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas**. The proposed method is released, and the vehicle simulator will be released once it is ready!
 
 <p align="center">
   <img width="712pix" src="img/system_overview.png">
@@ -13,12 +13,13 @@ Checkout our demo at [Video Link](https://youtu.be/R6M81tOSEi0)
 <img width="65%" src="img/simulated_factors.gif"/>
 </a>
 </p>
+
 ## Prerequisites
 
 We tested on Ubuntu 64-bit 18.04, ROS Melodic. [ROS Installation](http://wiki.ros.org/ROS/Installation). The package is tested on Ubuntu 18.04 with ROS Melodic. 
 
-### 2. **Ceres Solver** 
-[Ceres Solver](https://ceres-solver.googlesource.com/ceres-solver) 
+### 1. **Ceres Solver** 
+[Ceres Solver](http://ceres-solver.org/installation.html)
 
 
 ## Build
