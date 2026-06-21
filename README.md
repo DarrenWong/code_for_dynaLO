@@ -48,6 +48,7 @@ Key features:
 - Supports two modes: **bag mode** (augments a pre-recorded static scene) and **live mode** (subscribes to `/velodyne_points` in real time)
 
 See [`lidar_vehicle_sim/README.md`](lidar_vehicle_sim/README.md) for full setup instructions and usage details.
+If Git LFS is not familiar or convenient, the simulator input bag `non_dynamic.bag` can also be downloaded directly from [Dropbox](https://www.dropbox.com/scl/fi/pwac41k7ub2sx0c9ffh2j/non_dynamic.bag?rlkey=x9cste9xk04n9ukiquxhmkzfs&st=lsc5s8xa&dl=0).
 
 
 ### Launch

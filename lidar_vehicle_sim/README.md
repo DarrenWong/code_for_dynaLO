@@ -72,6 +72,14 @@ Source ROS before running:
 source /opt/ros/noetic/setup.bash
 ```
 
+## Input bag
+
+The sample static-scene input bag, `non_dynamic.bag`, is tracked in this
+repository with Git LFS. If you do not use Git LFS, or if the file does not
+download correctly after cloning, you can download it directly from
+[Dropbox](https://www.dropbox.com/scl/fi/pwac41k7ub2sx0c9ffh2j/non_dynamic.bag?rlkey=x9cste9xk04n9ukiquxhmkzfs&st=lsc5s8xa&dl=0)
+and place it in the `lidar_vehicle_sim/` directory.
+
 ---
 
 ## Quick start
