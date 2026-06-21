@@ -1,6 +1,6 @@
 # DynaLO
 
-This repo will contain the implementation for our [paper](https://ieeexplore.ieee.org/document/10337805): **Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas**. The proposed method is released, and the vehicle simulator will be released once it is ready!
+This repo contains the implementation for our [paper](https://ieeexplore.ieee.org/document/10337805): **Dynamic Object-aware LiDAR Odometry Aided by Joint Weightings Estimation in Urban Areas**. The proposed DynaLO method is released, and the LiDAR vehicle simulator is now also available in the `lidar_vehicle_sim/` directory!
 
 <p align="center">
   <img width="712pix" src="img/system_overview.png">
@@ -31,7 +31,23 @@ We tested on Ubuntu 64-bit 18.04, ROS Melodic. [ROS Installation](http://wiki.ro
     source ~/catkin_ws/devel/setup.bash
 ```
 ## Download test rosbag
-Download [dynamic vehicle data](https://www.dropbox.com/scl/fi/j1ddn5yx89nsog82qycsc/dynamic_nuscene_0171.bag?rlkey=cn68y9exz9oyw06gbazgr6her&dl=0), this data is modified based on [nuScenes](https://www.nuscenes.org/) Sequence 0171 using our proposed vehicle simulator (will release soon) 
+Download [dynamic vehicle data](https://www.dropbox.com/scl/fi/j1ddn5yx89nsog82qycsc/dynamic_nuscene_0171.bag?rlkey=cn68y9exz9oyw06gbazgr6her&dl=0), this data is modified based on [nuScenes](https://www.nuscenes.org/) Sequence 0171 using our proposed vehicle simulator (see `lidar_vehicle_sim/` for the released simulator).
+
+## LiDAR Vehicle Simulator
+
+The `lidar_vehicle_sim/` directory contains a ROS-based tool that injects synthetic moving vehicles into a static LiDAR point-cloud scene and produces a ground-truth-labelled ROS bag — without any physical sensor.
+
+<p align="center">
+  <img width="712pix" src="img/simulated_factors.gif">
+</p>
+
+Key features:
+- Simulates hollow bounding-box vehicle models sampled at 10 pts/m
+- Handles occlusion by culling background points inside each vehicle's angular footprint
+- Labels points in the `time` field: `10` = dynamic, `5` = static
+- Supports two modes: **bag mode** (augments a pre-recorded static scene) and **live mode** (subscribes to `/velodyne_points` in real time)
+
+See [`lidar_vehicle_sim/README.md`](lidar_vehicle_sim/README.md) for full setup instructions and usage details.
 
 
 ### Launch
